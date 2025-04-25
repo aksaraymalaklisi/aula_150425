@@ -127,15 +127,13 @@ INNER JOIN pedidos ON clientes.id = pedidos.cliente_id;
 
 -- Nota do professor: "INNER JOIN retorna apenas os registros que têm correspondência
 -- em AMBAS as tabelas."
--- Isso pode parecer confuso, mas o que está acontecendo é:
--- pedidos 
 
 -- Utilizando o LEFT JOIN
 -- Vendo o que atualmente temos em clientes e pedidos
 SELECT * FROM clientes;
 SELECT * FROM pedidos;
 
--- Unindo as tabelas acima. Note que clientes e pedidos foram invertidos
+-- Unindo as tabelas acima.
 SELECT clientes.nome, pedidos.valor --
 FROM clientes
 LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id;
@@ -149,7 +147,7 @@ LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id;
 SELECT * FROM clientes;
 SELECT * FROM pedidos;
 
--- Unindo as tabelas acima. Note que clientes e pedidos foram invertidos
+-- Unindo as tabelas acima.
 SELECT clientes.nome, pedidos.valor --
 FROM clientes
 RIGHT JOIN pedidos ON clientes.id = pedidos.cliente_id;
